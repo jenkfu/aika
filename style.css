@@ -1,0 +1,531 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Acre-Bold";
+  src: url("./fonts/Acre-Extrabold.woff2") format("woff2"),
+    url("./fonts/Acre-Extrabold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Acre-Regular";
+  src: url("./fonts/Acre-Regular.woff2") format("woff2"),
+    url("./fonts/Acre-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Acre-thin";
+  src: url("./fonts/Acre-Thin.woff2") format("woff2"),
+    url("./fonts/Acre-Thin.woff") format("woff");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F7F7F9;
+}
+
+.back {
+  position: fixed;
+  bottom: 0;
+  left: 1rem;
+  font-size: 3rem;
+  transform: rotate(-90deg);
+  z-index: 20;
+
+}
+
+h1 {
+  font-family: "Acre-Bold";
+  font-size: 60px;
+  letter-spacing: .25rem;
+  margin-bottom: 10px;
+}
+
+
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-family: "Acre-Bold";
+}
+
+
+.fond {
+  background: url(images/fond.svg);
+}
+.fond2 {
+  background-image: url(images/fond2.svg);
+}
+
+.fond3 {
+  background-image: url(images/fond3.svg);
+  top: 1rem;
+}
+.fond, .fond2, .fond3 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 110vh;
+  width: 100vw;
+  z-index: -3;
+}
+
+
+nav {
+  display: flex;
+  padding: 1rem;
+}
+
+nav a {
+  margin: .5rem;
+  padding: .5rem;
+}
+
+.box {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logo,
+.aika {
+  width: 210px;
+}
+
+.aika {
+  justify-self: start;
+  color: white;
+ 
+}
+.fille {
+  position: absolute;
+  left: 1rem;
+  bottom: -7rem;
+  width: 300px;
+}
+
+.contact{
+  width: 200px;
+}
+
+.fonctions,
+.formulaire {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+}
+
+.fonctions {
+  margin-top: 9rem;
+}
+.marie {
+  border-radius: 50%;
+  width: 120px;
+  margin-right: 1.5rem;
+}
+
+.citation {
+  margin-top: 1rem;
+  float: right;
+  font-family: "Acre-thin";
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  margin-right: 3rem;
+}
+
+cite {
+  font-size: 12px;
+  width: 52rem;
+  margin-top: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  align-items: center;
+}
+
+.video {
+  width: 60%;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px 5px (255, 0, 0, 0.8);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem 0 5rem 0;
+}
+
+.envoi {
+  background-color: green;
+  text-align: center;
+}
+
+legend,
+.citation {
+  font-family: "Acre-thin";
+}
+
+legend {
+  color: white;
+}
+
+input,
+textarea {
+  margin: 1rem;
+  padding: 1rem;
+  border: solid 1px #A1ABED;
+  border-radius: 30px;
+  width: 40vw;
+  background-color: white;
+  font-family: "Acre-Regular";
+}
+
+input:last-child {
+  width: 8rem;
+}
+.reseaux {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 2;
+  margin-left: 2rem;
+
+
+}
+.sociaux {
+ margin-right: 1rem;
+}
+.icons {
+  padding: 10px;
+  width: 60px;
+ fill: #A1ABED;
+}
+
+
+footer {
+display: flex;
+justify-content: center;
+align-items: center; 
+  background-color: #262430;
+  padding-bottom: 1rem;
+  color: white;
+  font-family: "Acre-regular";
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.box:nth-child(3),
+.box:nth-child(4),
+.box:nth-child(5) {
+  flex-direction: column;
+}
+
+.acc {
+  text-align: center;
+  font-family: "Acre-Bold";
+
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 85%;
+  position: relative;
+  margin: auto;
+  /* border: 1px solid plum; */
+  height: 70vh;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  /* border: 2px solid green; */
+  background-color: rgba(241, 241, 241, 0.87);
+  height: 90%;
+}
+
+.contenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* border: solid 1px blue; */
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100%;
+  font-family: "Acre-Regular";
+}
+
+.fonctext {
+  width: 30vw;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 20px;
+  user-select: none;
+  border: 2px solid;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+p {
+  font-family: "Acre-Regular";
+}
+strong {
+  font-family: "Acre-Bold";
+  font-size: 1.15rem;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 5px 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.pdc,
+.cgu {
+  width: 80%;
+  margin: auto;
+  padding-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.soutal {
+  font-family: "Acre-Regular";
+  color: white;
+  text-align: center;
+}
+
+.valeurs,
+.soutiens {
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.valeurs img {
+  width: 100px;
+}
+.soutiens img {
+  width: 200px;
+}
+
+.none {
+  display: none;
+}
+
+.valiens:hover .none {
+  display: block;
+}
+
+legend {
+  padding: 1rem;
+}
+
+.valiens {
+  width: 150px;
+}
+
+table {
+  border: solid 1px grey;
+  width: 90%;
+  margin: auto;
+}
+
+
+td {
+  padding: 1rem;
+  margin: .5rem;
+  border-bottom: solid 1px gray;
+}
+
+.mentions {
+  padding: 1rem 1rem 2rem;
+  margin-left: 1rem;
+}
+
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+
+
+
+
+@media (max-width:800px) {
+  h3 {
+    font-size: 1rem;
+
+  }
+
+  .box,
+  .fonctions,
+  .formulaire,
+  .contenu,
+  .valeurs,
+  .soutiens {
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .box {
+    height: auto;
+  
+  }
+  .box:nth-child(3),
+  .box:nth-child(5),
+  .box:nth-child(7) { 
+    background: linear-gradient(45deg, rgba(95,111,224,1) 50%, rgba(98,153,234,1) 100%);
+  }
+
+  .box:nth-child(1),
+  .box:nth-child(2),
+  .box:nth-child(3),
+  .box:nth-child(4),
+  .box:nth-child(5) {
+    padding-bottom: 10rem;
+  }
+
+  .prev,
+  .next {
+    top: 40%;
+  }
+
+  .contenu {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+
+
+  .explications, .citation {
+    width: 90%;
+  }
+
+  .fonctext {
+    width: 100%;
+  }
+  .fille {
+    bottom: -2rem;
+    width: 180px;
+  }
+
+.fond, .fond2, .fond3 {
+  background-image: none;
+
+}
+ 
+
+  form {
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .formulaire img {
+    margin-top: 3rem;
+    width: 150px;
+  }
+
+  input {
+    height: 1rem;
+    margin-bottom: .75rem;
+  }
+
+  textarea {
+    margin: 0
+  }
+
+  .valiens {
+    width: 70px;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    width: 70px;
+  }
+}
